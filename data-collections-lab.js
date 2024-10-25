@@ -1,6 +1,8 @@
 // ========== Part 1: Refactoring Old Code ========== 
+// ========== Part 2: Expanding Functionality (added on top of part one)========== 
 let csvStr = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 let word = '';
+let data = [];
 let row = [];
 
 // Loop through characters in string
@@ -17,12 +19,13 @@ for (let i = 0; i < csvStr.length; i++) {
         word += ch;
     }
 
-    // If new line, print out the row and reset word + row
+    // If new line, add row to data and reset word + row
     if (ch == "\n"){
-        console.log(row.toString());
+        data.push(row);
         word = "";
         row = [];
     }
 }
 
-
+// Print out the final result
+console.log(data);
