@@ -89,7 +89,6 @@ console.log(avg); // print out average.
 
 
 // ======== Part 5: Full Circle ========
-console.log(data.toString())
 let newCsv = '';
 data.forEach((obj) => {
     newCsv += Object.values(obj).toString()+"\n";
