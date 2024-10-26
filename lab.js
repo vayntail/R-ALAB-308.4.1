@@ -39,6 +39,16 @@ const CSV_STR = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\
 // ======== Part 3: Transforming Data ========
 data = [];
 headings = [];
+
+/* CSV_STR.split('\n') looks like this:
+[
+    ID,Name,Occupation,Age
+    42,Bruce,Knight,41
+    57,Bob,Fry Cook,19
+    63,Blaine,Quiz Master,58
+    98,Bill,Doctor’s Assistant,26
+]
+*/
 CSV_STR.split('\n').forEach((string) => {
     // If first line, add to headers
     if (string == CSV_STR.split('\n')[0]){
@@ -57,3 +67,7 @@ CSV_STR.split('\n').forEach((string) => {
     }
 })
 console.log(data); // print out array
+
+
+
+// ======== Part 4: Transforming Data ========
