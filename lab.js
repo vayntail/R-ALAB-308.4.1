@@ -71,3 +71,17 @@ console.log(data); // print out array
 
 
 // ======== Part 4: Transforming Data ========
+
+// remove last element from sorted array
+data.pop();
+// insert object at index 1
+data.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" });
+// add object at end of array
+data.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
+// calculate the average age of the group.
+let total = 0;
+for (const index in data) {
+    total += +data[index].age; // add to total (turn string to int using +);
+}
+let avg = total / data.length; // find average by dividing by total number of data
+console.log(avg); // print out average.
