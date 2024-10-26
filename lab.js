@@ -70,7 +70,7 @@ console.log(data); // print out array
 
 
 
-// ======== Part 4: Transforming Data ========
+// ======== Part 4: Sorting and Manipulating Data ========
 
 // remove last element from sorted array
 data.pop();
@@ -85,3 +85,13 @@ for (const index in data) {
 }
 let avg = total / data.length; // find average by dividing by total number of data
 console.log(avg); // print out average.
+
+
+
+// ======== Part 5: Full Circle ========
+console.log(data.toString())
+let newCsv = '';
+data.forEach((obj) => {
+    newCsv += Object.values(obj).toString()+"\n";
+})
+console.log(newCsv);
